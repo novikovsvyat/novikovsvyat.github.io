@@ -1,0 +1,273 @@
+*,
+*::before,
+*::after {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+html {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	min-width: 300px;
+    min-height: 100%;
+    margin: 0;
+	padding: 0;
+
+	background-color: #778899;
+	background-repeat: no-repeat;
+	background-position: top center;
+    background-attachment: fixed;
+    background-size: cover;
+
+	overflow-y: scroll;
+
+	font-family: 'Montserrat', 'Arial', sans-serif;
+	color: #ffffff;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+*:focus {
+outline: 0;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	white-space: nowrap;
+	-webkit-clip-path: inset(100%);
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.container {
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+}
+
+.card {
+	text-align: center;
+	width: 100%;
+	max-width: 600px;
+}
+
+.card-photo {
+    background-color: rgb(250,250,250);
+    padding: 50px;
+    box-shadow: 0 0 10px 0 rgb(0,0,0);
+    z-index: 2;
+    position: relative;
+}
+
+.card-photo img {
+	display: block;
+	margin: 0 auto;
+	border-radius: 50%;
+	box-shadow: 0 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card-text {
+	background-color: rgb(230, 76, 60);
+	margin: 0 10px;
+	box-shadow: 0 0 7px 0 rgb(0,0,0);
+	padding: 25px;
+	z-index: 1;
+	position: relative;
+}
+
+.card-welcome {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-weight: 300;
+}
+
+.card-name {
+	margin: 0;
+	padding: 0;
+	font-size: 25px;
+	text-align: center;
+	margin-bottom: 15px;
+	
+}
+
+.card-description {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-weight: 300;
+}
+
+.card-description b {
+	font-weight: 600;
+}
+
+.card-description a {
+	color: #ffffff;
+	text-decoration: underline;
+	
+}
+
+.card-description a:hover,
+.card-description a:focus {
+	color: #ffffff;
+	text-decoration: none;
+	border-bottom: 1px solid #ffffff;
+}
+
+.card-description b {
+	font-weight: 600;
+}
+
+.card-content {
+	background-color: rgb(250,250,250);
+    padding: 20px 20px;
+    position: relative;
+    margin: 0 10px;
+    box-shadow: 0 0 4px 0 rgb(0,0,0);
+}
+
+.card-social-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.social-list-item {
+	margin: 5px 10px;
+}
+
+.social-list-item path {
+	fill: #aab8c2;
+}
+
+.social-list-item,
+.social-list-item svg,
+.social-list-item a {
+	display: block;
+	width: 25px;
+	height: 25px;
+} 
+
+.list-link-twitter:hover path,
+.list-link-twitter:focus path {
+	fill: #1da1f2;
+} 
+
+.list-link-vkontakte:hover path,
+.list-link-vkontakte:focus path {
+	fill: #45668e;
+}
+
+.list-link-telegram:hover path,
+.list-link-telegram:focus path {
+	fill: #0088cc;
+}
+
+.list-link-skype:hover path,
+.list-link-skype:focus path {
+	fill: #00aff0;
+}
+
+.list-link-instagram:hover path,
+.list-link-instagram:focus path {
+	fill: #c13584;
+}
+
+.list-link-github:hover path,
+.list-link-github:focus path {
+	fill: #222;
+}
+
+.list-link-facebook:hover path,
+.list-link-facebook:focus path {
+	fill: #3b5998;
+}
+
+@media (min-width: 768px) {
+
+	.card {
+		margin: 0 auto;
+	}
+
+	.container {
+		height: 100vh;
+	}
+}
+
+.dark,
+.dark body,
+.dark a {
+	color: #ffffff;
+}
+
+body.dark {
+	background-color: rgb(71,71,71);
+}
+
+.dark .card-content,
+.dark .card-photo {
+	background-color: rgb(61,61,61);
+}
+
+.dark .social-list-item path {
+	fill: #aab8c2;
+}
+
+
+
+.dark-mode-switcher {
+	position: absolute;
+	border: none;
+	box-shadow: none;
+	background-color: rgb(230, 76, 60);
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	right: 25px;
+	bottom: 25px;
+	cursor: pointer;
+	box-shadow: 0 0 4px 0 rgb(0,0,0);
+	transition: 0.3s;
+}
+
+.dark-mode-switcher:hover,
+.dark-mode-switcher:focus {
+	box-shadow: 0 0 14px 0 rgb(0,0,0);
+	transition: 0.3s;
+}
+
+.dark-mode-switcher:active {
+	box-shadow: 0 0 4px 0 rgb(0,0,0);
+	transition: 0s;
+}
+
+
+
+
+
+
