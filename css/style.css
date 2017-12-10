@@ -208,6 +208,21 @@ outline: 0;
 	fill: #3b5998;
 }
 
+.dark-mode-switcher {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	border: none;
+	box-shadow: none;
+	background-color: rgb(230, 76, 60);
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	box-shadow: 0 0 4px 0 rgb(0,0,0);
+	transition: 0.3s;
+}
+
 @media (min-width: 768px) {
 
 	.card {
@@ -216,6 +231,32 @@ outline: 0;
 
 	.container {
 		height: 100vh;
+	}
+
+	.dark-mode-switcher {
+		position: absolute;
+		border: none;
+		box-shadow: none;
+		background-color: rgb(230, 76, 60);
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
+		right: 25px;
+		bottom: 25px;
+		cursor: pointer;
+		box-shadow: 0 0 4px 0 rgb(0,0,0);
+		transition: 0.3s;
+	}
+
+	.dark-mode-switcher:hover,
+	.dark-mode-switcher:focus {
+		box-shadow: 0 0 14px 0 rgb(0,0,0);
+		transition: 0.3s;
+	}
+
+	.dark-mode-switcher:active {
+		box-shadow: 0 0 4px 0 rgb(0,0,0);
+		transition: 0s;
 	}
 }
 
@@ -240,31 +281,6 @@ body.dark {
 
 
 
-.dark-mode-switcher {
-	position: absolute;
-	border: none;
-	box-shadow: none;
-	background-color: rgb(230, 76, 60);
-	border-radius: 50%;
-	width: 50px;
-	height: 50px;
-	right: 25px;
-	bottom: 25px;
-	cursor: pointer;
-	box-shadow: 0 0 4px 0 rgb(0,0,0);
-	transition: 0.3s;
-}
-
-.dark-mode-switcher:hover,
-.dark-mode-switcher:focus {
-	box-shadow: 0 0 14px 0 rgb(0,0,0);
-	transition: 0.3s;
-}
-
-.dark-mode-switcher:active {
-	box-shadow: 0 0 4px 0 rgb(0,0,0);
-	transition: 0s;
-}
 
 
 
